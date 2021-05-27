@@ -4,14 +4,14 @@ import {FetchQuizData} from "./API"
 
 export  type Contextprops = {
   Loading: Boolean,
-  QuizData: QuizQuestions[] | undefined
+  QuizData: QuizQuestions[] 
 }
 
 export const QuizContext= createContext<Contextprops>({} as Contextprops)
 
 export const QuizContextProvider: React.FC = ({ children}) => {
 const [Loading, setLoading] = useState(false)
-  const [QuizData, setQuizData] = useState<QuizQuestions[]>()
+  const [QuizData, setQuizData] = useState<QuizQuestions[]>([])
 
   useEffect( () => {
     async function FetchData() {
