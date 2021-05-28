@@ -1,11 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { QuizQuestions} from "../services/Types"
+import { QuizQuestions, Contextprops} from "../services/Types"
 import {FetchQuizData} from "./API"
 
-export  type Contextprops = {
-  Loading: Boolean,
-  QuizData: QuizQuestions[] 
-}
 
 export const QuizContext= createContext<Contextprops>({} as Contextprops)
 
